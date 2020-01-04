@@ -3,7 +3,4 @@ import requests
 import json
 
 class Pinterest:
-
-
-
-
+    pass
