@@ -45,7 +45,16 @@ class Facebook:
     def publish_photo_msg(self, message, image_url):
         # 1. read the TODO above
         # 2. write your code here
-        return
+        import requests
+        
+        urlm="https://graph.facebook.com/"+self.page_id+"/photos/"
+        data={'caption':message,
+                'url':image_url,
+                'published':'true',
+                'access_token':self.page_access_token
+        }
+        output=requests.post(url=urlm, data=data)
+        return output
 
 if __name__ == '__main__':
     facebook = Facebook()
@@ -55,8 +64,8 @@ if __name__ == '__main__':
     # 2) Copy the URL of the image and assign it to the 'image_url' variable
     #    Eg: image_url = 'http://ksmartstatic.sify.com/cmf-1.0.0/appflow/bawarchi.com/Image/oeturjecjjdah_bigger.jpg'
     # 3) Fill the 'my_name' variable with your name so that you know the posts you have created
-    image_url = ''
-    my_name = ''
+    image_url = 'https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/very_big_1/public/feature/images/ice_cream_1.jpg'
+    my_name = 'Soumitra Shukla'
 
     message = my_name + ' likes this ice-cream!'
     facebook.publish_photo_msg(message, image_url)
