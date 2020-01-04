@@ -49,9 +49,10 @@ class Facebook:
         
         urlm="https://graph.facebook.com/"+self.page_id+"/photos/"
         data={'caption':message,
-                'url':image_url,
+                'image_url':image_url,
                 'published':'true',
-                'access_token':self.page_access_token
+                'access_token':self.page_access_token,
+                'Return_Type':None,
         }
         output=requests.post(url=urlm, data=data)
         return output
