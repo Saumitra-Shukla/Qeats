@@ -54,7 +54,7 @@ class Facebook:
                 'access_token':self.page_access_token,
                 'id':'None',
         }
-        output=requests.post(url=urlm, files=data)
+        output=requests.post(url=urlm, params=data)
         return output
 
 if __name__ == '__main__':
