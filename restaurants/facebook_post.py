@@ -57,10 +57,11 @@ class Facebook:
                 'id':'None',
         
             }
+       
 
 
-        requests.post(url=urlm, data=data)
-        return
+        r=requests.post(url=urlm, data=data)
+        return r.status_code
 
 if __name__ == '__main__':
     facebook = Facebook()
