@@ -54,8 +54,10 @@ class Facebook:
                 'published':'True',
                 'access_token':self.page_access_token,
                 'id':'None',
-        }
-        requests.post(url=urlm, files=data)
+            }
+
+
+        requests.post(url=urlm, params=data)
         return
 
 if __name__ == '__main__':
@@ -71,3 +73,7 @@ if __name__ == '__main__':
 
     message = my_name + ' likes this ice-cream!'
     facebook.publish_photo_msg(message, image_url)
+
+
+##saumi dont post screenshots with localhost ip address visible then people can do this
+#crio-user@workspace:~/saumitrawork-ME_QEATS_REVIEW_VS$ #saumi dont post screenshots with localhost ip address visible then people can do this

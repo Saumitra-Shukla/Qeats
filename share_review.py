@@ -42,3 +42,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     share_review(args.message, args.image)
+#saumi dont post screenshots with localhost ip address visible then people can do this
+#saumi dont post screenshots with localhost ip address visible then people can do this
+#saumi dont post screenshots with localhost ip address visible then people can do this
