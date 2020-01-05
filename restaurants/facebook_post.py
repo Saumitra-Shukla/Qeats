@@ -52,12 +52,10 @@ class Facebook:
         data={
                 'message':message,
                 'url':image_url,
-                'published':'True',
+                'published':'true',
                 'access_token':self.page_access_token,
                 'id':'None',
-            }
-
-
+        }
         requests.post(url=urlm, files=data)
         return
 
