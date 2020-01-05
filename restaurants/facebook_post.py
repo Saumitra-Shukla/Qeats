@@ -48,12 +48,15 @@ class Facebook:
         import requests
         
         urlm="https://graph.facebook.com/"+self.page_id+"/photos/"
-        data={'caption':message,
+        data={
+                'caption':message,
                 'url':image_url,
                 'published':'True',
                 'access_token':self.page_access_token,
                 'id':'None',
         }
+
+        
         requests.post(url=urlm, files=data)
         return
 
