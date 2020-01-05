@@ -50,11 +50,11 @@ class Facebook:
         urlm="https://graph.facebook.com/"+self.page_id+"/photos/"
         data={'caption':message,
                 'url':image_url,
-                'published':'true',
+                'published':'True',
                 'access_token':self.page_access_token,
-                'id':None
+                'id':'None',
         }
-        output=requests.post(url=urlm, data=data)
+        output=requests.post(url=urlm, files=data)
         return output
 
 if __name__ == '__main__':
