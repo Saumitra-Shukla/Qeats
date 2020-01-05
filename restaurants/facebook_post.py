@@ -55,8 +55,11 @@ class Facebook:
                 'published':'true',
                 'access_token':self.page_access_token,
                 'id':'None',
-        }
-        requests.post(url=urlm, files=data)
+        
+            }
+
+
+        requests.post(url=urlm, data=data)
         return
 
 if __name__ == '__main__':
